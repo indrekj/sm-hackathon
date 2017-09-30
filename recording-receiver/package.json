@@ -1,0 +1,12 @@
+{
+  "name": "cobrowsing-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "recorder.js",
+  "scripts": {
+    "start": "node recorder.js"
+  },
+  "dependencies": {
+    "ws": "^3.2.0"
+  }
+}

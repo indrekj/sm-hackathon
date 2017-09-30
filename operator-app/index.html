@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html>
+  <head>
+  </head>
+
+  <body>
+    <img id="cobrowsing" style="width: 600px"></img>
+  </body>
+
+  <script type="text/javascript">
+    // var ws = new WebSocket("ws://cobrowsing-server.herokuapp.com");
+    var ws = new WebSocket("ws://10.200.0.118:9443/visitor");
+    ws.onopen = function() {
+      console.log('web socket open');
+    }
+    ws.onmessage = function (event) {
+      var imageUrl = window.URL.createObjectURL(event.data);
+      document.querySelector('#cobrowsing').src = imageUrl;
+    }
+  </script>
+</html>
